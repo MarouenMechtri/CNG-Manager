@@ -3,7 +3,7 @@ CNG-Manager - Cloud Networking Gateway Manager
 
 
 Installation
-============
+------------
 ::
 
   sudo apt-get install couchdb
@@ -11,7 +11,7 @@ Installation
 
 
 Usage
-=====
+------------
 
 Start PyOCNI server
 ::
