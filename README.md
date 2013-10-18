@@ -11,6 +11,7 @@ Image for OpenNebula
 
 Image for OpenStack
 
+
 3. Installing CNG Manager
 -------------------------
 
