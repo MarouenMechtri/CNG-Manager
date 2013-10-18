@@ -1,25 +1,33 @@
 CNG-Manager - Cloud Networking Gateway Manager
 ==============================================
 
+1. Introduction
+---------------
 
-Installation
-------------
-::
+2. Getting the CNG image file
+-----------------------------
+Image for OpenNebula
+Image for OpenStack
 
-  sudo apt-get install couchdb
-  sudo python setup.py install
+3. Installing CNG Manager
+-------------------------
 
-
-Usage
-------------
-
-Start PyOCNI server
-::
-
-  sudo python start.py
+    sudo apt-get install couchdb
+    sudo python setup.py install
 
 
-Start CNG-Manger server
-::
+4. Starting CNG Manager
+-----------------------
 
-  sudo python start_CNG-M.py
+Start PyOCNI server:
+
+    sudo python start.py
+
+
+Start CNG-Manger server:
+
+    sudo python start_CNG-M.py
+
+
+5. First network configuration example
+--------------------------------------
