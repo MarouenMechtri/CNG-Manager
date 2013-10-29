@@ -6,6 +6,8 @@ CNG-Manager - Cloud Networking Gateway Manager
 
 The CNG Manager is conceived to provide connectivity between resources acquired from distributed cloud providers
 and to hide heterogeneity in networking technologies. CNG Manager controls and configures virtual gateway called CNG.
+The CNG Manager manages a list of [OCCI](http://occi-wg.org/) categories to configure connectivity. Since our solution is based on OCCI 
+paradigm, we have used PyOCNI as an OCCI server.
 
 
 
