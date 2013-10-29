@@ -7,9 +7,9 @@ CNG-Manager - Cloud Networking Gateway Manager
 2. Getting the CNG image file
 -----------------------------
 
-Image for OpenNebula
+Download CNG image file from: 
 
-Image for OpenStack
+Download a contextualized CNG image file prepared for OpenNebula framework from:
 
 
 3. Installing CNG Manager
