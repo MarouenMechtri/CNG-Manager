@@ -4,8 +4,18 @@ CNG-Manager - Cloud Networking Gateway Manager
 1. Introduction
 ---------------
 
+The CNG Manager is conceived to provide connectivity between resources acquired from distributed cloud providers
+and to hide heterogeneity in networking technologies. CNG Manager controls and configures virtual gateway called CNG.
+
+
+
 2. Getting the CNG image file
 -----------------------------
+
+The CNG is designed to provide a set of technologies and network functions 
+in a virtual appliance and to provide a RESTful interface to enable the 
+configuration and the programmability of its features.
+
 
 Download CNG image file from: 
 
