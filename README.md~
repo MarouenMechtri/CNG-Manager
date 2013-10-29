@@ -1,11 +1,11 @@
 CNG-Manager - Cloud Networking Gateway Manager
 ==============================================
 
-# Authors
+### Authors
 
 Copyright (C) Marouen Mechtri <marouen.mechtri@it-sudparis.eu>
 
-# Contributors
+### Contributors
 
 Marouen Mechtri <marouen.mechtri@it-sudparis.eu>
 
@@ -39,7 +39,13 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 3. Installing CNG Manager
 -------------------------
 
+### Pre-requisite Packages
+
+    sudo apt-get install python-setuptools
     sudo apt-get install python-all-dev
+
+### couchdb and pyOCNI installation
+
     sudo apt-get install couchdb
     sudo python setup.py install
 
