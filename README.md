@@ -39,12 +39,12 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 3. Installing CNG Manager
 -------------------------
 
-### Pre-requisite Packages
+### Pre-requisite Packages:
 
     sudo apt-get install python-setuptools
     sudo apt-get install python-all-dev
 
-### couchdb and pyOCNI installation
+### Couchdb and pyOCNI installation:
 
     sudo apt-get install couchdb
     sudo python setup.py install
