@@ -14,16 +14,14 @@ paradigm, we have used [PyOCNI](https://github.com/jordan-developer/pyOCNI) as O
 2. Getting the CNG image file
 -----------------------------
 
-Before start using CNG Manager we download the CNG image file.
 The CNG is designed to provide a set of technologies and network functions in a virtual appliance and to provide a RESTful interface to enable the configuration and the programmability of its features.
 
+Before start using CNG Manager we download the CNG image file.
 
 **Download CNG image file from:**
-
 http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage.qcow2/download
 
 **Download a contextualized CNG image file prepared for OpenNebula framework from:**
-
 http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.qcow2/download
 
 3. Installing CNG Manager
