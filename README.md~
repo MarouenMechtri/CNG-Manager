@@ -1,15 +1,15 @@
 CNG-Manager - Cloud Networking Gateway Manager
 ==============================================
 
-# Author
+# Authors
 
-Marouen Mechtri <marouen.mechtri@it-sudparis.eu>
+Copyright (C) Marouen Mechtri <marouen.mechtri@it-sudparis.eu>
 
 # Contributors
 
 Marouen Mechtri <marouen.mechtri@it-sudparis.eu>
 
-Djamal Zeghlache '<djamal.zeghlache@it-sudparis.eu>'
+Djamal Zeghlache <djamal.zeghlache@it-sudparis.eu>
 
 1. Introduction
 ---------------
