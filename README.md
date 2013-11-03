@@ -77,4 +77,4 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 5. First network configuration example
 --------------------------------------
 
-![Network Configuration Example](https://github.com/MarouenMechtri/CNG-Manager/blob/master/solarized-yinyang.png)
+![Network Configuration Example](https://github.com/MarouenMechtri/CNG-Manager/blob/master/pyocni/img/config-example.jpg)
