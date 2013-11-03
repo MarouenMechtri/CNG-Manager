@@ -30,7 +30,9 @@ gateways and the links between them. These elements are OCCI categories (cng, li
 OpenVPN, GRE, IPsec, NAT, OpenFlow ...). The CNG Manager relies on the designed drivers to remotely configure
 the gateways (CNGs) deployed in the infrastructure layer.
 
-
+If you want to use/test the CNG Manager framework, you have to download the CNG image (qcow2 format) and to download CNG Manager source code.
+ 
+    $git clone git@github.com:MarouenMechtri/CNG-Manager.git
 
 2. Getting the CNG image file
 -----------------------------
