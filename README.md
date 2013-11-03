@@ -81,8 +81,7 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 
 * intercng.json::
 
-`
-{
+```{
     "resources":[
         {
             "kind":"http://schemas.ogf.org/occi/infrastructure#intercng",
@@ -108,5 +107,4 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
             }
         }
     ]
-}
-`
+}```
