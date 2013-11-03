@@ -81,30 +81,30 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 
 * intercng.json::
 
-   '{
-       "resources":[
-           {
-               "kind":"http://schemas.ogf.org/occi/infrastructure#intercng",
-               "attributes":{
-                   "occi":{
-                       "intercng":{
-                           "name":"First Network Configuration Example",
-                           "publicaddrCNGsrc":"1.1.1.1",
-                           "privateaddrCNGsrc":"192.168.1.1",
-                           "privateNetToCNGsrc":"192.168.1.0/24",
-                           "ethernameCNGsrc":"eth0",
-                           "providerCNGsrc":"site1",
-                           "publicaddrCNGdst":"2.2.2.2",
-                           "privateaddrCNGdst":"10.10.10.1",
-                           "privateNetToCNGdst":"10.10.10.0/24",
-                           "ethernameCNGdst":"eth0",
-                           "providerCNGdst":"site2",
-                           "linkType":"openvpn",
-                           "reusable":"1",
-                           "account":"userTest"
-                       }
-                   }
-               }
-           }
-       ]
-   }'
+'{
+    "resources":[
+        {
+            "kind":"http://schemas.ogf.org/occi/infrastructure#intercng",
+            "attributes":{
+                "occi":{
+                    "intercng":{
+                        "name":"First Network Configuration Example",
+                        "publicaddrCNGsrc":"1.1.1.1",
+                        "privateaddrCNGsrc":"192.168.1.1",
+                        "privateNetToCNGsrc":"192.168.1.0/24",
+                        "ethernameCNGsrc":"eth0",
+                        "providerCNGsrc":"site1",
+                        "publicaddrCNGdst":"2.2.2.2",
+                        "privateaddrCNGdst":"10.10.10.1",
+                        "privateNetToCNGdst":"10.10.10.0/24",
+                        "ethernameCNGdst":"eth0",
+                        "providerCNGdst":"site2",
+                        "linkType":"openvpn",
+                        "reusable":"1",
+                        "account":"userTest"
+                    }
+                }
+            }
+        }
+    ]
+}'
