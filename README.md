@@ -97,19 +97,6 @@ The most important information needed for configuration are:
 ![Network Configuration Example](https://raw.github.com/MarouenMechtri/CNG-Manager/master/pyocni/img/config-example.jpg)
 
 
-* Network configuration:
-
-        curl -X POST -d@intercng.json -H 'content-type: application/occi+json' -H 'accept: application/occi+json' -v http://127.0.0.1:8085/intercng/
-        curl -X POST http://127.0.0.1:8085/intercng/8e007fe9-e535-4e1f-9794-b526fdb05d29?action=start
-
-* Response:
-
-        {
-            "Location":[
-                "http://127.0.0.1:8085/intercng/8e007fe9-e535-4e1f-9794-b526fdb05d29"
-            ]
-        }
-
 * Configuration file: intercng.json:
 
         {
@@ -139,4 +126,22 @@ The most important information needed for configuration are:
                 }
             ]
         }
+
+
+* Network configuration using cURL commands. The first cURL command instantiates an intercng instance and the second command launchs the configuration process:
+
+        curl -X POST -d@intercng.json -H 'content-type: application/occi+json' -H 'accept: application/occi+json' -v http://127.0.0.1:8085/intercng/
+        curl -X POST http://127.0.0.1:8085/intercng/8e007fe9-e535-4e1f-9794-b526fdb05d29?action=start
+
+* Response of the first command:
+
+        {
+            "Location":[
+                "http://127.0.0.1:8085/intercng/8e007fe9-e535-4e1f-9794-b526fdb05d29"
+            ]
+        }
+
+* To bring connectivity between CNGs down:
+
+        curl -X POST http://127.0.0.1:8085/intercng/8e007fe9-e535-4e1f-9794-b526fdb05d29?action=stop
 
