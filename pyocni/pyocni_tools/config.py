@@ -41,7 +41,7 @@ logger = logging.getLogger("OCCILogging")
 occi_config = ConfigObj(get_absolute_path_from_relative_path("../occi_server.conf"))
 OCNI_IP = occi_config['OCNI_IP']
 OCNI_PORT = occi_config['OCNI_PORT']
-BACKENDS_FILE = occi_config['backends_file']
+BACKENDS_FILE = get_absolute_path_from_relative_path(occi_config['backends_file'])
 DEFAULT_BACKEND = occi_config['default_backend']
 
 # Loading the DB server configuration file
