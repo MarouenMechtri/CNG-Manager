@@ -19,6 +19,17 @@ and to hide heterogeneity in networking technologies. CNG Manager controls and c
 The CNG Manager manages a list of [OCCI](http://occi-wg.org/) categories to configure connectivity. Since the CNG Manager is based on OCCI 
 paradigm, we have used [PyOCNI](https://github.com/jordan-developer/pyOCNI) as OCCI server.
 
+The CNG Manager have a northbound interface towards connectivity request and a southbound interface
+interacting with transport technologies through drivers.
+
+* The northbound interface is composed of 3 elements responsible for the configuration of
+gateways and the links between them.
+
+
+* The southbound interfaces towards the underlying networking technologies require technology specific drivers (such as
+OpenVPN, GRE, IPsec, NAT, OpenFlow ...). The CNG Manager relies on the designed drivers to remotely configure
+the gateways (CNGs) deployed in the infrastructure layer.
+
 
 
 2. Getting the CNG image file
