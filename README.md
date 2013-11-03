@@ -76,3 +76,5 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 
 5. First network configuration example
 --------------------------------------
+
+![Network Configuration Example](https://github.com/MarouenMechtri/CNG-Manager/blob/master/Configuration%20example.jpg)
