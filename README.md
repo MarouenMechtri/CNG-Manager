@@ -108,3 +108,22 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
         }
     ]
 }'
+
+* filter_categories.json::
+
+      {
+       "actions": [
+           {
+               "attributes": {
+                   "method": {
+                       "mutable": true,
+                       "required": false,
+                       "type": "string",
+                       "pattern": "graceful|acpioff|poweroff",
+                       "default": "poweroff"
+                   }
+               }
+           }
+       ]
+       }
+
