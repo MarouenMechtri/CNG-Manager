@@ -79,7 +79,7 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 
 ![Network Configuration Example](https://raw.github.com/MarouenMechtri/CNG-Manager/master/pyocni/img/config-example.jpg)
 
-
+* intercng.json
    {
        "resources":[
            {
