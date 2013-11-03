@@ -23,7 +23,7 @@ The CNG Manager have a northbound interface towards connectivity request and a s
 interacting with transport technologies through drivers.
 
 * The northbound interface is composed of 3 elements responsible for the configuration of
-gateways and the links between them.
+gateways and the links between them. These elements are OCCI categories (cng, linkcng and intercng).
 
 
 * The southbound interfaces towards the underlying networking technologies require technology specific drivers (such as
