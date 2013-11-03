@@ -82,7 +82,6 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 * intercng.json:
 
 `
-
 {
     "resources":[
         {
@@ -110,5 +109,4 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
         }
     ]
 }
-
 `
