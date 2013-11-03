@@ -86,11 +86,11 @@ gateways CNG 1 and CNG 2 deployed respectively in site 1 and site 2.
 
 The most important information needed for the configuration are:
 
-1. External IP address of CNG 1: _publicaddrCNGsrc_
-2. Network address of VMs connected to CNG 1: _privateNetToCNGsrc_
-3. External IP address of CNG 2: _publicaddrCNGdst_
-4. Network address of VMs connected to CNG 2: _privateNetToCNGdst_
-5. The type of network between CNGs which can be "openvpn, ipsec and openflow": _linkType_ 
+1. External IP address of CNG 1: *_publicaddrCNGsrc_*
+2. Network address of VMs connected to CNG 1: *_privateNetToCNGsrc_*
+3. External IP address of CNG 2: *_publicaddrCNGdst_*
+4. Network address of VMs connected to CNG 2: *_privateNetToCNGdst_*
+5. The type of network between CNGs which can be "openvpn, ipsec and openflow": *_linkType_* 
 
 ![Network Configuration Example](https://raw.github.com/MarouenMechtri/CNG-Manager/master/pyocni/img/config-example.jpg)
 
