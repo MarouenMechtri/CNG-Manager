@@ -87,20 +87,20 @@ gateways CNG 1 and CNG 2 deployed respectively in site 1 and site 2.
 The most important information needed for configuration are:
 
 1. External IP address of CNG 1 _(1.1.1.1)_: **_publicaddrCNGsrc_**
-2. Network address of VMs connected to CNG 1 _(192.168.1.0/24)_: **_privateNetToCNGsrc_**
-3. External IP address of CNG 2 _(2.2.2.2)_: **_publicaddrCNGdst_**
-4. Network address of VMs connected to CNG 2 _(10.10.10.0/24)_: **_privateNetToCNGdst_**
-5. The type of network between CNGs which can be "openvpn, ipsec and openflow": **_linkType_** 
+2. Private IP address of CNG 1 _(192.168.1.1)_: **_privateaddrCNGsrc_**
+3. Network address of VMs connected to CNG 1 _(192.168.1.0/24)_: **_privateNetToCNGsrc_**
+4. External IP address of CNG 2 _(2.2.2.2)_: **_publicaddrCNGdst_**
+5. Private IP address of CNG 2 _(10.10.10.1)_: **_privateaddrCNGdst_**
+6. Network address of VMs connected to CNG 2 _(10.10.10.0/24)_: **_privateNetToCNGdst_**
+7. The type of network between CNGs which can be "openvpn, ipsec and openflow": **_linkType_** 
 
 ![Network Configuration Example](https://raw.github.com/MarouenMechtri/CNG-Manager/master/pyocni/img/config-example.jpg)
-
-
-
 
 
 * Network configuration:
 
         curl -X POST -d@intercng.json -H 'content-type: application/occi+json' -H 'accept: application/occi+json' -v http://127.0.0.1:8085/intercng/
+        curl -X POST http://127.0.0.1:8085/intercng/8e007fe9-e535-4e1f-9794-b526fdb05d29?action=start
 
 * Response:
 
@@ -110,7 +110,7 @@ The most important information needed for configuration are:
             ]
         }
 
-* intercng.json:
+* Configuration file: intercng.json:
 
         {
             "resources":[
