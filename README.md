@@ -65,7 +65,7 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 4. Starting CNG Manager
 -----------------------
 
-### Start PyOCNI server:
+### Start pyOCNI server:
 
     sudo python start.py
 
