@@ -87,6 +87,13 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 
         curl -X POST -d@intercng.json -H 'content-type: application/occi+json' -H 'accept: application/occi+json' -v http://127.0.0.1:8085/intercng/
 
+* Response:
+
+        {
+            "Location":[
+                "http://127.0.0.1:8085/intercng/8e007fe9-e535-4e1f-9794-b526fdb05d29"
+            ]
+        }
 
 * intercng.json:
 
