@@ -40,7 +40,7 @@ If you want to use/test the CNG Manager framework, you have to download the [CNG
 The CNG is designed to provide a set of technologies and network functions in a virtual appliance. 
 CNG provides also a RESTful interface to enable the configuration and the programmability of its features by the CNG Manager.
 
-Before start using CNG Manager we download the CNG image file.
+To download the CNG image file.
 
 **Download CNG image file from:**
 
