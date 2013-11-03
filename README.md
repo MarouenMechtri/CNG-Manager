@@ -51,7 +51,7 @@ http://sourceforge.net/projects/cngmanager/files/cngimages/cngImage-OpenNebula.q
 3. Installing CNG Manager
 -------------------------
 
-### Pre-requisite Packages:
+### Prerequisite Packages:
 
     sudo apt-get install python-setuptools
     sudo apt-get install python-all-dev
