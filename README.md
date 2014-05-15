@@ -147,5 +147,4 @@ The most important information needed for configuration is:
         
 ### Acknowledgments
 
-        This appliance development was supported by EASI-CLOUDS and other collaborative projects. 
-
+This appliance development was supported by EASI-CLOUDS and other collaborative projects. 
