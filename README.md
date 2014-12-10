@@ -32,7 +32,7 @@ the gateways (CNGs) deployed in the infrastructure layer.
 
 If you want to use/test the CNG Manager framework, you have to download the [CNG image](https://github.com/MarouenMechtri/CNG-Manager#2-getting-the-cng-image-file) (qcow2 format) and to download CNG Manager source code. Use:
  
-    git clone git@github.com:MarouenMechtri/CNG-Manager.git
+    git clone https://github.com/MarouenMechtri/CNG-Manager.git
 
 2. Getting the CNG image file
 -----------------------------
