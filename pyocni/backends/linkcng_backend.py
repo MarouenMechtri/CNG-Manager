@@ -34,6 +34,8 @@ Created on Jul 15, 2013
                 - linkType                   //3 types of link: openvpn,ipsec and openflow
                 - tunneladdrSrc              //will be initialised by the create fonction based on linkType
                 - tunneladdrDst              //will be initialised by the create fonction based on linkType
+                - tunnelportSrc              //will be initialised by the create fonction based on linkType
+                - tunnelportDst              //will be initialised by the create fonction based on linkType
                 - tunneladdrprefix           //will be initialised by the create fonction based on linkType
                 - tunnelinterface            //will be initialised by the create fonction based on linkType
                 - tunnelauthenticationkey    //will be initialised by the create fonction based on linkType
@@ -52,6 +54,8 @@ from pyocni.backends.drivers.DriverIPSEC import *
 # getting the Logger
 logger = config.logger
 
+import pyocni.pyocni_tools.config as config
+
 class backend(backend_interface):
 
     def create(self, entity):
@@ -63,9 +67,20 @@ class backend(backend_interface):
         '''
         if entity['attributes']['occi']['linkcng']['linkType'] == "openvpn":
 
-            entity['attributes']['occi']['linkcng']['tunneladdrSrc']="10.10.1.2"
-            entity['attributes']['occi']['linkcng']['tunneladdrDst']="10.10.1.3"
-            entity['attributes']['occi']['linkcng']['tunnelinterface']="vtun0"
+            database = config.get_PyOCNI_db()
+            nb_tunnelAdd = database.info()['doc_count'] - 10
+            firstdecimal = nb_tunnelAdd%255
+            seconddecimal = nb_tunnelAdd/255
+            if firstdecimal == 0:
+                firstdecimal=1
+            elif firstdecimal >= 254:
+                firstdecimal=1
+                seconddecimal+=1
+            entity['attributes']['occi']['linkcng']['tunneladdrSrc']="192.168." + str(seconddecimal) + "." + str(firstdecimal)
+            entity['attributes']['occi']['linkcng']['tunneladdrDst']="192.168." + str(seconddecimal) + "." + str(firstdecimal+1)
+            entity['attributes']['occi']['linkcng']['tunnelportSrc']=str(9612+(nb_tunnelAdd/2))
+            entity['attributes']['occi']['linkcng']['tunnelportDst']=str(9612+(nb_tunnelAdd/2))
+            entity['attributes']['occi']['linkcng']['tunnelinterface']="vtun" + str(nb_tunnelAdd)
 
             logger.debug('\n[linkCNG:start]-----Setting OpenVPN tunnel parameters')
         elif entity['attributes']['occi']['linkcng']['linkType'] == "ipsec":
@@ -202,10 +217,12 @@ class backend(backend_interface):
                     privateNetToCNGdst = entity['attributes']['occi']['linkcng']['privateNetToCNGdst']
                     tunneladdrSrc = entity['attributes']['occi']['linkcng']['tunneladdrSrc']
                     tunneladdrDst = entity['attributes']['occi']['linkcng']['tunneladdrDst']
+                    tunnelportSrc = entity['attributes']['occi']['linkcng']['tunnelportSrc']
+                    tunnelportDst = entity['attributes']['occi']['linkcng']['tunnelportDst']
 
-                    cngsrcDriver.configure_site_to_site_openvpn(cngsrcDriver, publicaddrCNGsrc, tunnelinterface, tunneladdrSrc, tunneladdrDst, publicaddrCNGdst, privateNetToCNGdst)
-                    cngdstDriver.configure_site_to_site_openvpn(cngdstDriver, publicaddrCNGdst, tunnelinterface, tunneladdrDst, tunneladdrSrc, publicaddrCNGsrc, privateNetToCNGsrc)
-
+                    cngsrcDriver.configure_site_to_site_openvpn(cngsrcDriver, publicaddrCNGsrc, tunnelinterface, tunneladdrSrc, tunneladdrDst, publicaddrCNGdst, privateNetToCNGdst, tunnelportSrc, tunnelportDst)
+                    cngdstDriver.configure_site_to_site_openvpn(cngdstDriver, publicaddrCNGdst, tunnelinterface, tunneladdrDst, tunneladdrSrc, publicaddrCNGsrc, privateNetToCNGsrc, tunnelportDst, tunnelportSrc)
+                    
                     logger.debug('\n[linkCNG:start]-----End configuration of OpenVPN link')
                 elif entity['attributes']['occi']['linkcng']['linkType'] == "ipsec":
 
