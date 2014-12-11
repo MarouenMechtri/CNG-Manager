@@ -58,7 +58,7 @@ class ovpnDriver:
     '''
 
 
-    def configure_openVPN_Site_to_Site(self, interfaceName, localAddress, remoteAddress, remoteHost):
+    def configure_openVPN_Site_to_Site(self, interfaceName, localAddress, remoteAddress, remoteHost, localPort, remotePort):
         """run <command>
         Execute this command on all hosts in the list"""
         cmd_conf = '/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper '
@@ -68,6 +68,8 @@ class ovpnDriver:
             '&&' + cmd_conf + 'set interfaces openvpn ' + interfaceName + ' mode site-to-site' +
             '&&' + cmd_conf + 'set interfaces openvpn ' + interfaceName + ' remote-address ' + remoteAddress +
             '&&' + cmd_conf + 'set interfaces openvpn ' + interfaceName + ' remote-host ' + remoteHost +
+            '&&' + cmd_conf + 'set interfaces openvpn ' + interfaceName + ' local-port ' + localPort +
+            '&&' + cmd_conf + 'set interfaces openvpn ' + interfaceName + ' remote-port ' + remotePort +
             '&&' + cmd_conf + 'set interfaces openvpn ' + interfaceName + ' shared-secret-key-file /config/auth/secret ')
 
 
@@ -77,12 +79,12 @@ class ovpnDriver:
 
 
 
-    def configure_site_to_site_openvpn(self, gwinstance, address, interfaceName, localAddress, remoteAddress, remoteHost, dstNetwork):
+    def configure_site_to_site_openvpn(self, gwinstance, address, interfaceName, localAddress, remoteAddress, remoteHost, dstNetwork, localPort, remotePort):
 
         cmds=[]
         logger.debug('\n[OpenVPN Driver]-----Establishing Tunnel between ' + address + ' and ' + remoteHost +  '...............OK')
 
-        cmds.append(gwinstance.configure_openVPN_Site_to_Site(interfaceName, localAddress, remoteAddress, remoteHost))
+        cmds.append(gwinstance.configure_openVPN_Site_to_Site(interfaceName, localAddress, remoteAddress, remoteHost, localPort, remotePort))
         logger.debug('\n[OpenVPN Driver]-----Configuring gateway (' + address + ') to reach network ' + dstNetwork + '..............OK')
 
         cmds.append(gwinstance.configure_staticRoute_interface(dstNetwork, interfaceName))
