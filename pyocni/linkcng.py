@@ -111,6 +111,16 @@ category = """{
                                                 "pattern": "(\\\\d{1,3}\\\\.\\\\d{1,3}\\\\.\\\\d{1,3}\\\\.\\\\d{1,3})",
                                                 "type": "string"
                                         },
+                                        "tunnelportSrc": {
+                                                "mutable": true,
+                                                "required": false,
+                                                "type": "string"
+                                        },
+                                        "tunnelportDst": {
+                                                "mutable": true,
+                                                "required": false,
+                                                "type": "string"
+                                        },
                                         "tunneladdrprefix": {
                                                 "mutable": true,
                                                 "required": false,
