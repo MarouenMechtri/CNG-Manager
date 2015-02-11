@@ -30,7 +30,7 @@ logging.basicConfig(
     datefmt='%d/%m/%Y %H:%M:%S',
 )
 
-class gwProcci:
+class ofDriver:
     """ Simple shell to run a command on the host """
 
 
@@ -270,16 +270,16 @@ class gwProcci:
 
 if __name__ == '__main__':
 
-    gw1 = gwProcci()
-    gw2 = gwProcci()
-    #gw3 = gwProcci()
-    #gw4 = gwProcci()
-    #gw5 = gwProcci()
-    #gw6 = gwProcci()
-    #gw7 = gwProcci()
-    #gw8 = gwProcci()
-    #gw9 = gwProcci()
-    #gw10 = gwProcci()
+    gw1 = ofDriver()
+    gw2 = ofDriver()
+    #gw3 = ofDriver()
+    #gw4 = ofDriver()
+    #gw5 = ofDriver()
+    #gw6 = ofDriver()
+    #gw7 = ofDriver()
+    #gw8 = ofDriver()
+    #gw9 = ofDriver()
+    #gw10 = ofDriver()
 
     gw1Address = '157.159.249.234'
     gw2Address = '157.159.249.235'
