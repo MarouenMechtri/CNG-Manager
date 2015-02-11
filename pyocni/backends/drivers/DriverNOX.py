@@ -1,10 +1,23 @@
-'''
-Created on Feb 25, 2011
-__author__       = 'Marouen Mechtri'
-__contact__      = Marouen.Mechtri@it-sudparis.eu
-__organization__ = Institut Telecom - Telecom SudParis
-
-'''
+# Copyright 2013 Institut Mines-Telecom - Telecom SudParis
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+"""
+Created on Feb 25, 2013
+@author: Marouen Mechtri
+@contact: marouen.mechtri@it-sudparis.eu
+@organization: Institut Mines-Telecom - Telecom SudParis
+@license: Apache License, Version 2.0
+"""
 
 import logging
 from client import OCCIclient
@@ -17,7 +30,7 @@ logging.basicConfig(
     datefmt='%d/%m/%Y %H:%M:%S',
 )
 
-class gwProcci:
+class noxDriver:
     """ Simple shell to run a command on the host """
 
 
@@ -102,7 +115,7 @@ if __name__ == '__main__':
     NOXmodules='switch discovery'
     NOXaddress = '157.159.103.54'
 
-    nox = gwProcci()
+    nox = noxDriver()
 
     ''' Configuration des gateways'''
     start_time = int(round(time.time() * 1000))
